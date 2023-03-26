@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hypotenuse Calculator</title>
+  </head>
+  <body>
+    <h1>Hypotenuse Calculator</h1>
+    <form method="get">
+      {{ form.as_p }}
+      <button type="submit">Calculate</button>
+    </form>
+    {% if a and b and c %}
+      <p>The hypotenuse of a triangle with leg {{ a }} and {{ b }} is {{ c }}.</p>
+    {% endif %}
+  </body>
+</html>
