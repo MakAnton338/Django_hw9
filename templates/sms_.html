@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SEND SMS</title>
+  </head>
+  <body>
+    <h1>SEND SMS</h1>
+    <form action="{% url 'sms:sms' %}" method="get">
+        <p>{{ form.phone_number.label_tag }} {{ form.phone_number }}</p>
+    <input type="Submit" name="Submit" value="Sand sms">
+    </form>
+    {% if phone_number %}
+      <p>Your sms is gone.</p>
+    {% endif %}
+  </body>
+</html>
